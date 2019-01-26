@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "module": "es2015", // AKA ES6
+    "moduleResolution": "node",
+    "target": "es2015",
+    "outDir": "./dist/",
+    "jsx": "react",
+    "lib": ["dom", "dom.iterable", "es2015", "esnext.array"],
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "allowJs": true
+  }
+}

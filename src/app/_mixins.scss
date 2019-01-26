@@ -1,0 +1,90 @@
+/**
+ * Generic CSS mixins
+ */
+@mixin vendor-prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -khtml-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
+}
+
+/** Fits a background image to its container. */
+@mixin background-image-fit($path, $position: center center) {
+  background: url($path) no-repeat $position;
+  background-size: contain;
+}
+
+@mixin box-sizing($type) {
+  @include vendor-prefix('box-sizing', $type);
+}
+
+@mixin border-radius($radius) {
+  @include vendor-prefix('border-radius', $radius);
+}
+
+@mixin box-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+  @include vendor-prefix('box-shadow', $x $y $blur $color);
+}
+
+@mixin clip-path($clip) {
+  @include vendor-prefix('clip-path', $clip);
+}
+
+@mixin column-count($count) {
+  @include vendor-prefix('column-count', $count)
+}
+
+@mixin display-flex($dir: 'row', $wrap: 'nowrap') {
+  // See https://css-tricks.com/using-flexbox/ for more
+  display: -ms-flexbox; // IE 10
+  display: -webkit-flex; // Safari
+  display: flex;
+  @include vendor-prefix('flex-flow', $dir $wrap)
+}
+
+@mixin flex-grow($grow) {
+  @include vendor-prefix('flex-grow', $grow)
+}
+
+@mixin flex-align-content($alignment) {
+  @include vendor-prefix('align-content', $alignment)
+}
+
+@mixin flex-align-items($alignment) {
+  @include vendor-prefix('align-items', $alignment)
+}
+
+@mixin flex-justify-content($alignment) {
+  @include vendor-prefix('justify-content', $alignment)
+}
+
+@mixin flex-shrink($shrink) {
+  @include vendor-prefix('flex-shrink', $shrink)
+}
+
+@mixin gradient($from, $to) {
+  background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+  background: -moz-linear-gradient(top,  $from, $to);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
+}
+
+@mixin inset-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+  @include vendor-prefix('box-shadow', inset $x $y $blur $color)
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}

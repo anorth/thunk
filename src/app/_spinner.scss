@@ -1,0 +1,22 @@
+@import 'mixins';
+
+// From http://tobiasahlin.com/spinkit/
+@mixin spinner-scaleout($size, $color, $duration: 1.0s) {
+  width: $size;
+  height: $size;
+  background-color: $color;
+  border-radius: 100%;
+
+  -webkit-animation: scaleout $duration infinite ease-in-out;
+  animation: scaleout $duration infinite ease-in-out;
+}
+
+@include keyframes(scaleout) {
+  0% {
+    @include vendor-prefix(transform, scale(0.0));
+  }
+  100% {
+    @include vendor-prefix(transform, scale(1.0));
+    opacity: 0;
+  }
+}

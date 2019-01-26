@@ -1,0 +1,40 @@
+@import '../constants';
+@import '../mixins';
+
+$root-width: 100%;
+$footer-height: 50px;
+
+#Root {
+  width: $root-width;
+  .content {
+    width: 100%;
+    min-height: 320px; // Roughly height of auth
+    margin-bottom: $footer-height;
+  }
+  .header {
+    width: 100%;
+    color: $mouse-gray;
+  }
+  .footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: $footer-height;
+    padding: 26px 0 0 0;
+    @include gradient(rgba(255, 255, 255, 0.2), white);
+
+    font-size: 10px;
+    color: $mouse-gray;
+    >div {
+      @include display-flex;
+      padding: 0 10px;
+    }
+    .tip {
+    }
+    .auth {
+      @include flex-grow(1);
+      text-align: right;
+    }
+  }
+}

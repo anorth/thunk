@@ -1,0 +1,44 @@
+{
+  "manifest_version": 2,
+  "name": "Thunk: Personal Productivity Search",
+  "short_name": "Thunk",
+  "version": "2",
+  "description": "Thunk improves search and discovery for Google Drive, GitHub, and more.",
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "permissions": [
+    "identity",
+    "storage",
+    "notifications",
+    "https://drive.google.com/*",
+    "https://docs.google.com/*",
+    "https://api.github.com/*"
+  ],
+  "optional_permissions": [
+  ],
+
+  "background": {
+    "page": "background.html",
+    "persistent": false
+  },
+
+  "browser_action": {
+    "default_title": "Search with Thunk",
+    "default_icon": "icon-128.png",
+    "default_popup": "window.html"
+  },
+
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "MacCtrl+Shift+F"
+      }
+    }
+  },
+
+  "content_security_policy": "default-src 'self'; script-src 'self' 'unsafe-eval'; style-src * 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://*; connect-src https://* http://localhost:8080 ws://localhost:8080;"
+}

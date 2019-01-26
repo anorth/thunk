@@ -1,0 +1,71 @@
+@import '../constants';
+@import '../mixins';
+@import '../spinner';
+
+#SignIn {
+  width: 100%;
+  $button-width: 280px;
+
+  .landing {
+    margin: 60px 60px 0 60px;
+    p {
+      margin-top: 12px;
+    }
+    h1 + p {
+      margin-top: 24px;
+    }
+    strong {
+      font-weight: $font-body-sans-semibold;
+    }
+    form {
+      margin-top: 20px;
+    }
+    .field-group {
+      width: 100%;
+      padding-top: 5px;
+      label {
+        width: 300px;
+      }
+      input, select {
+        margin-top: 8px;
+        width: $button-width;
+      }
+    }
+    .warning {
+      margin-top: 5px;
+      color: $mouse-gray;
+      font-size: 10px;
+    }
+    .error {
+      margin-top: 15px;
+      font-weight: bold;
+      color: red;
+    }
+    input[type=submit] {
+      display: inline-block;
+      margin-top: 30px;
+      width: $button-width;
+      height: 48px;
+      border: none;
+      @include box-shadow(2px, 2px, 5px);
+      background: $google-blue;
+      color: white;
+      font-family: $font-body-sans;
+      font-size: 18px;
+      font-weight: $font-body-sans-semibold;
+      &:hover {
+        background-color: $google-blue-darker;
+      }
+      &[disabled] {
+        background: $mouse-gray;
+      }
+    }
+  }
+
+  .spinner {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    @include spinner-scaleout(30px, $mouse-gray);
+  }
+}

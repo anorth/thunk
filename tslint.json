@@ -1,0 +1,24 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended",
+    "tslint-react"
+  ],
+  "jsRules": {},
+  "rules": {
+    "align": false,
+    "arrow-parens": false,
+    "comment-format": false,
+    "interface-name": false,
+    "jsx-wrap-multiline": false,
+    "jsx-alignment": false,
+    "jsx-no-multiline-js": false,
+    "trailing-comma": false,
+    "max-classes-per-file": false,
+    "max-line-length": false,
+    "no-console": false,
+    "no-trailing-whitespace": false,
+    "object-literal-sort-keys": false
+  },
+  "rulesDirectory": []
+}
