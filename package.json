@@ -46,7 +46,7 @@
     "bluebird": "^3.5.3",
     "dexie": "^2.0.4",
     "htmlparser2": "^3.10.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "minisearch": "^2.0.6",
     "moment": "^2.24.0",
     "react": "^16.7.0",
