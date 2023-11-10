@@ -42,7 +42,7 @@
     "write-file-webpack-plugin": "^4.5.0"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^1.6.0",
     "bluebird": "^3.5.3",
     "dexie": "^2.0.4",
     "htmlparser2": "^3.10.0",
